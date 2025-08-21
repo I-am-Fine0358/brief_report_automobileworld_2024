@@ -4,14 +4,17 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
-    height: 100vh;
+    min-height: 100vh;
     margin: 0;
+    padding: 20px;
 }
 
 .container {
+    width: 100%;
+    max-width: 600px;
     text-align: center;
     background-color: #ffffff;
-    padding: 50px;
+    padding: 40px;
     border-radius: 10px;
     box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
 }
@@ -26,17 +29,46 @@ p {
     margin-bottom: 30px;
 }
 
-.download-btn {
-    display: inline-block;
-    background-color: #007bff;
-    color: #ffffff;
-    padding: 15px 30px;
-    text-decoration: none;
-    border-radius: 5px;
-    font-weight: bold;
-    transition: background-color 0.3s ease;
+.file-list {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
 }
 
-.download-btn:hover {
-    background-color: #0056b3;
+.file-item {
+    display: flex;
+    align-items: center;
+    background-color: #f8f9fa;
+    padding: 15px;
+    border-radius: 8px;
+    text-decoration: none;
+    color: #333;
+    border: 1px solid #dee2e6;
+    transition: background-color 0.3s ease, border-color 0.3s ease;
+}
+
+.file-item:hover {
+    background-color: #e9ecef;
+    border-color: #adb5bd;
+}
+
+.file-icon {
+    width: 24px;
+    height: 24px;
+    margin-right: 15px;
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center;
+}
+
+.file-icon.pptx {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjRDgyMzI4IiBkPSJNNCAzSDIwQzIxLjEgMyAyMiAzLjkgMjIgNVYxOUMyMiAyMC4xIDIxLjEgMjEgMjAgMjFINFMyMC45IDIxIDMgMjAgMyAxOVY1QzMgMy45IDMuOSAzIDQgM1pNOSAxN0gxNVYxNUg5VjE3Wk05IDEzSDE1VjExSDlWMTNaTTkgOUgxNVY3SDlWOVoiLz48L3N2Zz4=');
+}
+
+.file-icon.xlsx {
+    background-image: url('data:image/svg+xml;base64,PHN2ZyB4bWxucz0iaHR0cDovL3d3dy53My5vcmcvMjAwMC9zdmciIHdpZHRoPSIyNCIgaGVpZ2h0PSIyNCIgdmlld0JveD0iMCAwIDI0IDI0Ij48cGF0aCBmaWxsPSIjMjE3MzQ2IiBkPSJNNCAzSDIwQzIxLjEgMyAyMiAzLjkgMjIgNVYxOUMyMiAyMC4xIDIxLjEgMjEgMjAgMjFINFMyMC45IDIxIDMgMjAgMyAxOVY1QzMgMy45IDMuOSAzIDQgM1pNMTMgMTdIMTlWMTVIMTNWMTdaTTEzIDEzSDE5VjExSDEzVjEzWk0xMyA5SDE5VjdIMTNWOVpNNyA3SDExVjlIN1YxMUg5VjlIOVY3SDdaTTcgMTNIOFYxNEg5VjE1SDdWMTZINVYxNEg3VjEzWiIvPjwvc3ZnZz4=');
+}
+
+.file-name {
+    font-weight: 500;
 }
